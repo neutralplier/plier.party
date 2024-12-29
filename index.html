@@ -7,15 +7,8 @@
   <body>
     <style>
     /* this sucks */
-    img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      -webkit-filter: drop-shadow(5px 5px 5px #222);
-      filter: drop-shadow(5px 5px 5px #222);
-    }
     body {
-      background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('backgroundplier.gif') 0 0 / 150px repeat;
+      background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('backgroundplier.png') 0 0 / 150px repeat;
       position: absolute;
       display: block;
       width: 100%;
@@ -23,16 +16,23 @@
       text-align: center;
       font-family:Arial, Helvetica, sans-serif;
       padding-bottom: 50px;
+      animation: scrollBackground 20s linear infinite;
     }
-    /*
-    iframe {
+    @keyframes scrollBackground {
+      0% {
+        background-position: 0% 0%;
+      }
+      100% {
+        background-position: 80% -200%;
+      }
+    }
+    img {
       display: block;
-      margin-top: 300px;
       margin-left: auto;
       margin-right: auto;
-      width: 70%;
+      -webkit-filter: drop-shadow(5px 5px 5px #222);
+      filter: drop-shadow(5px 5px 5px #222);
     }
-    */
     a {
       color: white;
       display: block;
@@ -44,7 +44,6 @@
     <div>
       <img src="soyjak 20 (forgot to pay for the domain award).png" onclick="plierClicked();">
       <a href="https://soyjak.party/plier"><b>/plier/</b></a>
-      <!--<iframe width="1280" height="720" src="https://www.youtube.com/embed/W0KYYIJ-paA" title="&#39;plier" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
     </div>
     <script>
       console.log("testing");
