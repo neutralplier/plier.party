@@ -7,24 +7,73 @@
     <meta name="keywords" content="plier, neutralplier, markiplier, markiplier soyjak, wojak, soyjak, sharty, soyjak party, soyjak.party, blogpost, blogposting, gemerald, gem, gemmy">
     <title>'plier</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+      body {
+        background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url('backgroundplier.png') 0 0 / 150px repeat;
+        position: absolute;
+        display: block;
+        width: 100%;
+        margin: 0px;
+        text-align: center;
+        font-family:Arial, Helvetica, sans-serif;
+        padding-bottom: 50px;
+        animation: scrollBackground 20s linear infinite;
+      }
+      @keyframes scrollBackground {
+        0%   { background-position: 0% 0%; }
+        100% { background-position: 80% -200%; }
+      }
+      @keyframes rotatePlier {
+        0%   { transform: rotate(0deg); }
+        25%  { transform: rotate(-4deg); }
+        50%  { transform: rotate(4deg); }
+        75%  { transform: rotate(-2deg); }
+        100% { transform: rotate(0deg); }
+      }
+      .rotate-plier {
+        animation: rotatePlier 0.3s ease;
+      }
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -50px;
+        -webkit-filter: drop-shadow(5px 5px 5px #222);
+        filter: drop-shadow(5px 5px 5px #222);
+        transform-origin: 50% 70%;
+      }
+      a {
+        color: white;
+        display: block;
+        padding-top: 20px;
+        font-size: 30px;
+        filter: drop-shadow(5px 5px 5px #4d4d4d)
+      }
+      @media only screen and (max-width: 600px) {
+        img { width:95%; }
+      }
+    </style>
   </head>
   <body>
     <div>
-      <img src="soyjak 20 (forgot to pay for the domain award).png" onclick="plierClicked();">
+      <img id="pliergem" src="soyjak 20 (clear).png" onclick="plierClicked();">
       <a href="https://soyjak.st/plier"><b>/plier/</b></a>
-      <a href="yay.html"><b>Look at this amazing page!</b></a>
     </div>
-    <div>
-      <a href="https://strawpoll.com/NMnQNpGXMg6" style="font-size:30px;"><b>please show you exist</b></a>
-    </div>
-    <!--
     <script>
-      console.log("testing");
+      let plierImg = document.getElementById("pliergem");
+      let neutralplier = true;
       function plierClicked(){
-        console.log("AAAAAAAA");
+        if(neutralplier){
+          plierImg.src = "soyjak 20 (soyface clear).png";
+          neutralplier = false;
+        }else{
+          plierImg.src = "soyjak 20 (clear).png";
+          neutralplier = true;
+        }
+        plierImg.classList.remove('rotate-plier');
+        void plierImg.offsetWidth;
+        plierImg.classList.add('rotate-plier');
       }
     </script>
-    -->
   </body>
 </html>
